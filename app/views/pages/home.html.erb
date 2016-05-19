@@ -1,5 +1,7 @@
 <div class="jumbotron center">
   <h1>Alpha blog</h1>
-  <%= link_to "Sign up now", "/signup", class: "btn btn-danger btn-lg btn-xlarge" %>  
+  <% if not logged_in? %>
+    <%= link_to "Sign up now", signup_path, class: "btn btn-danger btn-lg btn-xlarge" %>  
+  <% end %>
 </div>
 
